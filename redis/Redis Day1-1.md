@@ -10,7 +10,7 @@
 
 `docker stop 'container id'` 停止运行容器 <br>
 `docker rm 'container id'` 删除容器 (前提: 非启动状态) <br>
-`docker rmi 'image repository + tag'` 删除镜像 <br>
+`docker rmi 'image repository:tag'` 删除镜像 <br>
 
 `docker exec -it 'container id' sh` 进入虚拟系统 (-it 启用伪终端) <br>
 `docker exec -it 'container id' redis-cli` 直接进入 Redis <br>
@@ -25,9 +25,9 @@ http://hub.docker.com 远程仓库, 配置好的镜像可以推送至此. <br>
 `docker commit '容器 id' 自定义名:标记` 将容器重新打包进镜像以便接下来的推广 <br>
 
 > 若想推送至其他终端, 需重新打标签 <br>
-> `docker tag  172.16.16.227:5000/新 tag 名:标记` 重新打标签 <br>
+> `docker tag redis:5-alpine 172.16.16.227:5000/新 tag 名:标记` 重新打标签 <br>
 > `docker push 172.16.16.227:5000/新 tag 名:标记` 推送镜像 <br>
-> `docker push 172.16.16.227:5000/新 tag 名:标记` 拉取镜像 <br>
+> `docker pull 172.16.16.227:5000/新 tag 名:标记` 拉取镜像 <br>
 
 
 ## Redis
