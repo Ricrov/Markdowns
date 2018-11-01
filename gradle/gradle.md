@@ -194,3 +194,77 @@ public class RoleInfoController {
 
 }
 ```
+
+## 更多
+#### 自定义查询语句返回自定义数据
+> 注: 必须给予别名以和实体类相对应
+
+```java
+public interface RoleInfoRepository extends JpaRepository<RoleEntity, Long> {
+    // 注意: 筛出的每一列都需要给予别名, 否则不能被识别
+    @Query (value = "SELECT role.role_id AS roleId, role.role_name AS roleName, COUNT(rm.temp_module_id) AS moduleCount " +
+            "FROM role_info role LEFT JOIN role_module rm ON role.role_id = rm.temp_role_id " +
+            "GROUP BY role.role_id", nativeQuery = true)
+    List<RoleEx> roleGroup();
+
+    // 自定义查询方式2, 不给予 @Query 注解. 通过创建类的方式.
+    List<?> queryTest();
+
+}
+```
+
+#### 自定义查询的另一种方式: Repository 中创建类, 类名在接口的基础上 + Impl
+> 给予 @Repository 注解后系统会自动把此类当做接口的实现类
+
+```java
+@Repository
+public class RoleInfoRepositoryImpl {
+
+    // 系统会注入 EntityManager 对象, 通过此对象执行 SQL 语句
+    @Resource
+    private EntityManager entityManager;
+
+    // 手动实现 RoleInfoRepository 的方法
+    public List<?> queryTest() {
+
+        // 手动查询所有
+        String sql = "SELECT * FROM role_info";
+        Query query = entityManager.createNativeQuery(sql, RoleEntity.class);
+        List list = query.getResultList();
+
+        return list;
+    }
+
+}
+```
+
+#### 针对自定义查询创建的接口
+```java
+public interface RoleEx {
+    // 因返回结果有 3 列, 故书写 3 个抽象方法
+    Long getRoleId();
+
+    String getRoleName();
+
+    Integer getModuleCount();
+}
+```
+
+#### Controller 中补全方法
+```java
+@RestController
+public class RoleInfoController {
+    @Resource
+    private RoleInfoRepository roleInfoRepository;
+
+    @RequestMapping("/listGroup")
+    public List<RoleEx> listGroup() {
+        return this.roleInfoRepository.roleGroup();
+    }
+
+    @RequestMapping("/autoList")
+    public List<?> autoList() {
+        return this.roleInfoRepository.queryTest();
+    }
+}
+```
