@@ -153,7 +153,7 @@ public interface RoleInfoRepository extends JpaRepository<RoleEntity, Long> {
     // 注意: 筛出的每一列都需要给予别名, 否则不能被识别
     @Query (value = "SELECT role.role_id AS roleId, role.role_name AS roleName, COUNT(rm.temp_module_id) AS moduleCount " +
             "FROM role_info role LEFT JOIN role_module rm ON role.role_id = rm.temp_role_id " +
-            "GROUP BY role.role_id", nativeQuery = true)
+            "GROUP BY role.role_id WHERE role.role_id = :参数", nativeQuery = true)
     List<RoleEx> roleGroup();
 
     // 自定义查询方式2, 不给予 @Query 注解. 通过创建类的方式.

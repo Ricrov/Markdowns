@@ -19,6 +19,9 @@ _**配置文件的数据库连接后面必须加上时区配置**_
 ## REST
 > 利用rest包加JPA可以直接使用Restful风格的url代替JPA简单SQL操作(不需要写Controller)
 
+#### REST 依赖包
+`implementation('org.springframework.boot:spring-boot-starter-data-rest')`
+
 #### 相关配置
 - application.properties
   `spring.data.rest.base-path=` 在主页后拼接等号后的内容, 以便分别哪些是 Restful 风格, 哪些是普通的 JPA 操作.

@@ -2,7 +2,7 @@
 
 #### 依赖
 ```java
-compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.3.2'
+implementation('org.apache.shiro:shiro-spring:1.3.2')
 ```
 
 #### 在 SpringBoot 中配置 Shiro
@@ -15,6 +15,7 @@ compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.3.2'
 - 此方法的主要功能是创建一个 SecurityManager 并将自定义的(成员变量) Realm 放入其中
 - 然后将此 SecurityManager 设置到 SecurityUtils 中以供调用
 - 注意: 需要配置 SessionManager, 可配置为默认的 DefaultSessionManager
+- **特别注意: SecurityManager 的包为 `import org.apache.shiro.mgt.SecurityManager;`**
 ```java
 @Configuration
 public class ShiroConfig {
