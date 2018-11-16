@@ -1,7 +1,13 @@
 ## Shiro
 
-配置文件
-```ini
+- 依赖
+```
+compile group: 'org.apache.shiro', name: 'shiro-core', version: '1.3.2'
+compile group: 'org.apache.shiro', name: 'shiro-spring', version: '1.3.2'
+```
+
+配置文件 resources/shiro.ini
+```properties
 [users]
 # 格式: 用户名 = 密码, 角色1, 角色2, ... 角色n
 admin = admin, admin

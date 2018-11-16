@@ -1,6 +1,6 @@
 ## 基础
 #### 基本命令
-`docker run -it -p 6379:6379 '镜像id'` 创建运行容器 '-it'不加则使用守护进程启动. <br>
+`docker run -it --name -p 6379:6379 '镜像id'` 创建运行容器 '-it'不加则使用守护进程启动.--name 容器起名 <br>
 默认端口6379, 使用`--port xxx`指定端口号 <br>
 
 `docker ps` 查看运行中的容器 <br>
@@ -20,7 +20,7 @@ http://hub.docker.com 远程仓库, 配置好的镜像可以推送至此. <br>
 `docker tag redis:5-alpine '用户名/镜像新 tag 名:标记(标记内容随意)'` 重新给镜像打标签 <br>
 `docker push '用户名'/新 tag 名:标记名` 推送镜像至仓库 <br>
 `docker login` 登录 <br>
-`docker export '容器 id' > 自定义名.tar ~/ ` 导出容器 -- `>`把前一个文件的输出写到目标的文件里<br>
+`docker export -o 自定义名.tar ~/ '容器 id'` 导出容器 -- `>`把前一个文件的输出写到目标的文件里<br>
 `docker inport '自定义名.tar'` 导入容器 <br>
 `docker commit '容器 id' 自定义名:标记` 将容器重新打包进镜像以便接下来的推广 <br>
 
