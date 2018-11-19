@@ -36,7 +36,7 @@
  ```
 
 #### 使用第三方分词器
-`ik-analyzer-solr7-7.x.jar`
+`ik-analyzer-solr7-7.x.jar` 复制到 `C:\Program Files\web\solr-7.5.0\server\solr-webapp\webapp\WEB-INF\lib` 下
 
 ##### 导入数据
 - Step 1: 依赖包放入 `WEB-INF/lib` 下
@@ -53,7 +53,7 @@
 ```
 复制粘贴到`C:\Program Files\web\solr-7.5.0\server\solr\search\conf\solrconfig.xml` 中
 
-- Step 3: 复制`db-data-config.xml` 到 `C:\Program Files\web\solr-7.5.0\server\solr\search\conf` 下并进行配置 (注意时区必须填)
+- Step 3: 复制`C:\Program Files\web\solr-7.5.0\example\example-DIH\solr\db\conf\db-data-config.xml` 到 `C:\Program Files\web\solr-7.5.0\server\solr\search\conf` 下并进行配置 (注意时区必须填)
   - 配置此 xml 文件
     ```xml
     <dataConfig>
