@@ -25,8 +25,9 @@
 ```JSON
 {"phone":"13633344444", "message":"赶紧还钱"}
 ```
-- 此时 Queues 即会有消息进入 "pic1"
+- 此时 Queues 即会有消息进入
 ![FpSFje.png](https://s1.ax1x.com/2018/11/19/FpSFje.png)
+
 ## Queue
 #### 配置
 
