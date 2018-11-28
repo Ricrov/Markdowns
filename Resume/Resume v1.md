@@ -42,7 +42,7 @@
 
 入职初期作为海外开发部长的助理执行包括项目内对日沟通，电视会议；以及偏向营业类的接待客户等翻译类工作。在工作初期自学 JAVA、Servlet、Spring、SpringMVC、JavaScript、MySQL 等。 <br>
 而后担任某日本银行企业的后台开发项目的BSE工作。作为窗口职能协调客户方和服务方的技术问题联系沟通交流。 <br>
-后期进入项目组兼任 BSE 及后台开发工作。参与完成 房屋租赁管理系统 和 XXXX系统 的开发工作。 <br>
+后期进入项目组兼任 BSE 及后台开发工作。参与完成 房屋租赁管理系统 和 看护职员管理系统 等项目的开发工作。 <br>
 <hr>
 
 #### 大连市沃万商务咨询有限公司 2013.4 - 2014.10
@@ -55,20 +55,46 @@
 
   入职3个月后从 CallOperator 转为项目主管，担任末梢血管治疗以及血液透析治疗项目。从项目的运营管理、到与日本本地医生之间的沟通(电话以及Email)，对医生提供的信息给予报酬的管理等等全权负责。其中与医生(客户)之间的交流全部使用日语，与管理层的交流使用英语和中文。熟练使用Office办公软件。 <br>
 
+
+
 ## 项目经验
 
-#### 商城后台管理系统 2016.8 - 2017.3
+#### 看护职员管理系统 2016.12 - 2017.3
+> 项目职务：JAVA 开发工程师、BSE
+
+项目描述：<br>
+此项目致力于支援繁杂的职员管理业务。<br>
+包括看护职员的基本情报管理、学历以及研修受讲情报、职员的异动或长期休假等等，管理各式各样的职员业务信息。<br>
+
+主要职责
+- 主要代码的开发工作, 参与部分功能的实现
+- 负责新规登录页面的前后台开发工作
+- 开发过程中对前后端的交互/数据库等问题的发现和处理
+
+开发环境：IntelliJ IDEA, Tomcat, SSM, Gradle <br>
+前端：Html, Css, Bootstrap, JavaScript, JQuery <br>
+数据库：MySQL <br>
+项目框架：Redis, Solr, FastDFS, AOP, log4j <br>
+
+<hr>
+#### 会议预定管理系统 2016.7 - 2016.11
 > 项目职务：JAVA 开发工程师
 
 项目描述：<br>
-此项目为某电商商城后台管理系统开发。
+此项目为公司内部使用的会议预定管理系统。<br>
+主要包括会议室管理和预定功能，多次迭代后加入会议签到等功能。
+大致分为用户模块、管理员模块、会议室管理模块、会议通知模块、会议记录模块、会议签到模块等。
 
-个人职能：
- - 负责后台商品上线下架管理 // TODO
- - a
+主要职责
+- 会议室管理模块功能的实现
+- 会议记录模块功能的实现
+
+开发环境：IntelliJ IDEA, Tomcat, SSM, SpringBoot, Maven <br>
+前端：Html, JavaScript, JQuery <br>
+数据库：MySQL <br>
 
 <hr>
-#### 房屋租赁后台管理系统 2016.1 - 2016.7
+#### 房屋租赁后台管理系统 2016.1 - 2016.6
 > 项目职务：JAVA 开发工程师、BSE
 
 项目描述：<br>
@@ -91,6 +117,7 @@
 开发环境：IntelliJ IDEA, Tomcat, SSM, Maven <br>
 前端：Html, JavaScript, JQuery <br>
 数据库：MySQL <br>
+项目框架：Shiro, Token, Redis <br>
 
 ## 教育背景
 
@@ -104,9 +131,8 @@
 ## 技能特长
 日语：精通。JLPT-N1。 <br>
 英语：熟练。CET6水平相当。 <br>
-掌握 Java、JavaScript、JQuery、MySQL、Spring、SpringMVC、SpringBoot、Mybatis、Redis。 <br>
-了解 Token、Shiro、JPA、JMS、Solr、activeMQ、RestTemplate、HttpClient。 <br>
+掌握 Java、JavaScript、JQuery、MySQL、Spring、SpringMVC、
+SpringBoot、Mybatis、Redis。 <br>
+了解 SpringCloud、Nginx LoadBalance、Token、Shiro、JPA、
+Solr、FastDFS、activeMQ、RestTemplate 等。 <br>
 熟练使用 Office。 ( Word，Excel，Powerpoint ) <br>
-
-## 自我评价
-学习能力强，理解速度快。开朗，对他人和睦，善于交流。
