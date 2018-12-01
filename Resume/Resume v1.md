@@ -90,7 +90,7 @@
 - 会议记录模块功能的实现
 
 开发环境：IntelliJ IDEA, Tomcat, SSM, SpringBoot, Maven <br>
-前端：Html, JavaScript, JQuery <br>
+前端：Html, JavaScript, JQuery, Bootstrap <br>
 数据库：MySQL <br>
 
 <hr>
